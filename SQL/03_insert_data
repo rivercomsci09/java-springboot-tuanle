@@ -1,0 +1,9 @@
+use demo_db;
+INSERT INTO role (id, rolename) VALUES (1,'ADMIN');
+INSERT INTO role (id, rolename) VALUES (2,'USER');
+INSERT INTO account (id, username, email, password) VALUES (1,'ttg','ttg@gmail.com','132');
+INSERT INTO account (id, username, email, password) VALUES (2,'admin','admin@gmail.com','132');
+INSERT INTO account (id, username, email, password) VALUES (3,'user','user@gmail.com','132');
+INSERT INTO account_role VALUES (1,1);
+INSERT INTO account_role VALUES (2,1);
+INSERT INTO account_role VALUES (3,2);
