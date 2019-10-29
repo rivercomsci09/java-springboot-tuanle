@@ -1,0 +1,20 @@
+CREATE DATABASE sbw;
+USE sbw;
+CREATE TABLE account(
+	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(20),
+    email VARCHAR(20),
+    password LONGTEXT
+);
+CREATE TABLE role(
+	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    rolename VARCHAR(20)
+);
+
+CREATE TABLE account_role(
+	accountid INT,
+    roleid INT
+);
+
+ALTER TABLE account_role ADD CONSTRAINT fk_account_role FOREIGN KEY (accountid) REFERENCES account(id)
+ALTER TABLE account_role ADD CONSTRAINT fk_account_role2 FOREIGN KEY (roleid) REFERENCES role(id)

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+
+<tiles-definitions>
+
+	<definition name="index" template="/WEB-INF/views/index.jsp">
+		<put-attribute name="cssfile" value="/WEB-INF/tiles/web/cssfile.jsp" />
+		<put-attribute name="header" value="/WEB-INF/tiles/web/header.jsp" />
+		<put-attribute name="body" value="/WEB-INF/tiles/web/body.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/web/footer.jsp" />
+	</definition>
+
+	<definition name="home" template="/WEB-INF/views/home.jsp">
+		<put-attribute name="cssfile" value="/WEB-INF/tiles/admin/cssfile.jsp" />
+		<put-attribute name="header" value="/WEB-INF/tiles/admin/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/tiles/admin/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="staticfooter" value="/WEB-INF/tiles/admin/staticfooter.jsp" />
+		<put-attribute name="footer" value="" />
+	</definition>
+	
+	<definition name="admin" extends="home">
+		<put-attribute name="title" value="Admin Page" />  
+		<put-attribute name="body" value="/WEB-INF/views/admin.jsp" />
+		<put-attribute name="staticfooter" value="" />
+	</definition>
+	
+	<definition name="user" extends="home">
+		<put-attribute name="title" value="User Page" />  
+		<put-attribute name="body" value="/WEB-INF/views/user.jsp" />
+		<put-attribute name="staticfooter" value="" />
+	</definition>
+	
+	<definition name="equipment" extends="home">
+		<put-attribute name="title" value="Equipment Page" />  
+		<put-attribute name="body" value="/WEB-INF/views/equipment.jsp" />
+		<put-attribute name="staticfooter" value="" />
+	</definition>
+	
+	<definition name="createequipment" extends="home">
+		<put-attribute name="title" value="Add Equipment" />  
+		<put-attribute name="body" value="/WEB-INF/views/createequipment.jsp" />
+		<put-attribute name="staticfooter" value="" />
+	</definition>
+	
+	<definition name="editequipment" extends="home">
+		<put-attribute name="title" value="Edit Equipment" />  
+		<put-attribute name="body" value="/WEB-INF/views/editequipment.jsp" />
+		<put-attribute name="staticfooter" value="" />
+	</definition>
+	
+	<definition name="userequipment" extends="home">
+		<put-attribute name="title" value="User Equipment" />  
+		<put-attribute name="body" value="/WEB-INF/views/userequipment.jsp" />
+		<put-attribute name="staticfooter" value="" />
+	</definition>
+	
+
+</tiles-definitions>

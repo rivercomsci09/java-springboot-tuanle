@@ -1,0 +1,12 @@
+CREATE TABLE equipment(
+	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name varchar(50),
+    type varchar(50),
+    description varchar(50),
+    status BIT
+);
+
+ALTER TABLE equipment ADD COLUMN accountid INT
+
+
+ALTER TABLE equipment ADD CONSTRAINT fk_account_equipment FOREIGN KEY (accountid) REFERENCES account(id)
